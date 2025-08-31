@@ -20,7 +20,7 @@ fun WazeSettingsComposable(
 ) {
     val context = LocalContext.current
     val preferences = remember(context) {
-        context.getSharedPreferences(Constants.WAZE_SETTINGS, Context.MODE_WORLD_READABLE)
+        context.getSharedPreferences(Constants.WAZE_SETTINGS, Context.MODE_WORLD_WRITABLE)
     }
 
     var playSpeedCameraSoundBelowSpeedLimit by remember(preferences) { mutableStateOf(
