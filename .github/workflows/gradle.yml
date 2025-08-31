@@ -1,12 +1,10 @@
 name: Build APK
-
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
-
   build:
     name: Build APK
     runs-on: ubuntu-latest
@@ -28,5 +26,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: "V4A (#${{github.run_number}})"
+          name: "AA+ (#${{github.run_number}})"
           path: app/build/outputs/apk/release/*.apk
