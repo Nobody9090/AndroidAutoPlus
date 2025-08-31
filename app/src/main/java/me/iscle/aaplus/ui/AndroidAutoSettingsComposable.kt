@@ -20,7 +20,7 @@ fun AndroidAutoSettingsComposable(
 ) {
     val context = LocalContext.current
     val preferences = remember(context) {
-        context.getSharedPreferences(Constants.ANDROID_AUTO_SETTINGS, Context.MODE_WORLD_WRITABLE)
+        context.getSharedPreferences(Constants.ANDROID_AUTO_SETTINGS, Context.MODE_PRIVATE)
     }
 
     var hookMusicStreamVolume by remember(preferences) { mutableStateOf(
